@@ -1,12 +1,39 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="assets/main.js" defer></script>
+    <title>Мамка</title>
+    <script scr="assets/main.js" defer></script>
+    <link rel="stylesheet" href="assets/style.css">
 </head>
+
 <body>
-    <img src="assets/1.png" alt="">
+    <button onclick="change()" class="btn__1">Нажми не пожалеешь</button>
+
+    <script>
+        function change(){
+            const text = document.querySelector('button');
+            text.textContent = 'Пожалел'
+
+        }
+    </script>
+
+    <div class="square" id="square"></div>
+    <script>
+        
+        document.addEventListener("mousemove", event => {
+            let square = document.getElementById('square');
+            let x = event.clientX;
+            let y = event.clientY;
+        square.style.left = x +"px";
+        square.style.top = y +"px";
+    })
+        
+    </script>
+
+    <img src="assets/Снимок экрана 2025-04-04 094958.png" alt="">
 </body>
+
 </html>
